@@ -1,8 +1,8 @@
 # Contributing
 
-We would love for you to contribute to Milligram and help us make this even better! Start reading this document to see it is not as difficult as you might have imagined.
-
-_Note: For issues relating to the site, please use the [milligram/milligram.github.io](https://github.com/milligram/milligram.github.io)_
+We would love for you to contribute to Centigram and help us make this
+even better! Start reading this document to see it is not as difficult
+as you might have imagined.
 
 ## Table of Contents
 
@@ -10,37 +10,47 @@ _Note: For issues relating to the site, please use the [milligram/milligram.gith
 - [Submit a Pull Request](#submit-a-pull-request)
 - [Building](#building)
 - [Style Guide](#style-guide)
-- [Test](#test)
 - [Code of Conduct](#code-of-conduct)
 - [License](#license)
 
 ## Open an Issue
 
-[Open an Issue](../../../issues/new) to report any problems or improvements. When necessary, use [Codepen](http://codepen.io/) to show the problem. Be sure to include some description to explain the problem.
+[Open an Issue](../../../issues/new) to report any problems or
+improvements. When necessary, use [Codepen](http://codepen.io/) to show the
+problem. Be sure to include some description to explain the problem.
 
 ## Submit a Pull Request
 
-To submit a new feature, make sure that changes are done to the source code. [Follow our style guide](#style-guide) and do not forget the tests and to attach the link to the [Codepen](http://codepen.io/) along with the description.
+To submit a new feature, make sure that changes are done to the source
+code. [Follow our style guide](#style-guide) and do not forget the tests
+and to attach the link to the [Codepen](http://codepen.io/) along with
+the description.
 
-Try to solve a problem for each pull request, this increases the chances of acceptance. When in doubt, open a [new issue](#open-an-issue) so we can answer you. Look at existing issues for ideas or to see if a similar issue has already been submitted.
+Try to solve a problem for each pull request, this increases the chances
+of acceptance. When in doubt, open a [new issue](#open-an-issue) so we
+can answer you. Look at existing issues for ideas or to see if a similar
+issue has already been submitted.
 
-1. Fork the Github repo: `git clone https://github.com/milligram/milligram.git`
-1. Create a new branch: `git checkout -b issuenumber-feature-name`
-1. Commit your changes: `git commit -m 'issuenumber-feature-name'`
-1. Push to the branch: `git push origin my-feature-name`
-1. Submit a pull request!
+1. Fork the Github repo: `git clone https://github.com/milouse/centigram.git`
+2. Create a new branch: `git checkout -b issuenumber-feature-name`
+3. Commit your changes: `git commit -m 'issuenumber-feature-name'`
+4. Push to the branch: `git push origin my-feature-name`
+5. Submit a pull request!
 
 ## Building
 
-First install [Node.js](https://nodejs.org/en/download/) for the build process. Now install all the dependencies by running `npm install` from the project directory. Once you have the dependencies installed, run `npm start`. This will run the build task which compiles the Sass files into Milligram.css file in the expanded and compressed version.
-
-You can do all of this from your browser using Gitpod, the free online dev environment.
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/milligram/milligram)
+First install [Node.js](https://nodejs.org/en/download/) for the build
+process. Now install all the dependencies, by running `npm install` from
+the project directory. Once you have the dependencies installed, run
+`npm build`. This will run the build task which compiles the Sass files
+into Centigram.css file in a compressed version.
 
 ## Style Guide
 
-Milligram use [Sass](http://sass-lang.com/) to give super powers to CSS. Look at how the code is being maintained, we must always be consistent. We try to follow best practices as much as possible. In addition, here are some tips you should follow:
+Centigram use [Sass](http://sass-lang.com/) to give super powers to
+CSS. Look at how the code is being maintained, we must always be
+consistent. We try to follow best practices as much as possible. In
+addition, here are some tips you should follow:
 
 - Properties and selectors are sorted in alphabetical order
 - Always use tab for indentation, no spaces
@@ -79,14 +89,12 @@ Milligram use [Sass](http://sass-lang.com/) to give super powers to CSS. Look at
 
 _Note: This style guide was inspired by [Idiomatic.css](https://github.com/necolas/idiomatic-css)._
 
-## Test
-
-Breaking CSS is easy. Checking every responsive page element is hard. That's why Milligram uses automated visual regression testing for responsive web UI by comparing DOM screenshots at various viewport sizes. To view the comparison, run `npm run visual-regression` after making changes to the source code.
-
 ## Code of Conduct
 
-Help us keep Milligram open and inclusive. Please read and follow our thoughts on [Code of Conduct](http://confcodeofconduct.com/).
+Help us keep Centigram open and inclusive. Please read and follow our
+thoughts on [Code of Conduct](http://confcodeofconduct.com/).
 
 ## License
 
-By contributing your code, you agree to license your contribution under the [MIT license](../license).
+By contributing your code, you agree to license your contribution under
+the [MIT license](../license).

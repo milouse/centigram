@@ -1,12 +1,11 @@
 {
-  "name": "milligram",
-  "version": "1.4.1",
+  "name": "centigram",
+  "version": "1.0.0",
   "description": "A minimalist CSS framework.",
-  "homepage": "https://milligram.io",
-  "repository": "milligram/milligram",
+  "repository": "milouse/centigram",
   "license": "MIT",
-  "author": "CJ Patoilo <cjpatoilo@gmail.com>",
-  "main": "dist/milligram.css",
+  "author": "Étienne Deparis <etienne@depar.is>",
+  "main": "dist/centigram.min.css",
   "keywords": [
     "bootstrap",
     "css",
@@ -23,57 +22,16 @@
     "mobile-first",
     "postcss",
     "responsive",
-    "sass",
-    "scss",
-    "stylus"
+    "sass"
   ],
-  "dependencies": {
-    "normalize.css": "~8.0.1"
-  },
   "devDependencies": {
-    "autoprefixer": "^9.6.1",
-    "ava": "^3.11.1",
-    "backstopjs": "3.8.8",
-    "banner-cli": "^0.14.3",
-    "browser-sync": "^2.18.5",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
-    "npm-run-all": "^4.1.5",
-    "nyc": "^15.1.0",
-    "onchange": "^7.0.2",
-    "postcss-cli": "^7.1.1",
-    "prettier-standard": "^16.3.0",
-    "rimraf": "^3.0.2",
-    "sass": "^1.26.10",
-    "sass-lint": "^1.12.1"
+    "autoprefixer": "^10.4",
+    "postcss-cli": "^10.0",
+    "sass": "^1.55"
   },
   "scripts": {
-    "autoprefixer": "postcss -u autoprefixer --no-map.inline --autoprefixer.browsers \"last 1 versions\" -r dist/*.css",
-    "banner": "banner-cli dist/*.css",
-    "build": "rimraf dist && run-s sass autoprefixer banner",
-    "lint": "prettier-standard --check && sass-lint --verbose --no-exit",
-    "prepublishOnly": "npm run build",
-    "sass": "sass --style expanded src/milligram.sass dist/milligram.css && sass --style compressed src/milligram.sass dist/milligram.min.css",
-    "server": "browser-sync start --no-notify -s test --ss dist -f dist",
-    "start": "run-p build watch server",
-    "test": "npm run build && nyc ava",
-    "visual-regression": "run-p server visual-regression:compare",
-    "visual-regression:compare": "run-s build && backstop test --config backstop.config.js",
-    "visual-regression:reference": "run-s build && backstop reference --config backstop.config.js",
-    "watch": "onchange src -- run-p build"
-  },
-  "prettier": {
-    "jsxSingleQuote": false,
-    "trailingComma": "all"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "**/*": [
-      "prettier-standard --format"
-    ]
+    "build": "sass --style compressed --no-source-map src/centigram.sass dist/centigram.min.css",
+    "postbuild": "postcss -u autoprefixer --no-map.inline --autoprefixer.browsers \"last 1 versions\" -r dist/*.css",
+    "watch": "sass --style expanded --watch src/centigram.sass dist/centigram.css"
   }
 }

@@ -1,15 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-bower_components
-node_modules
-
-# testing
-.nyc_output
-coverage
-
-# production
-# dist
-
-# debug
-*.log
+node_modules/
+dist/*.map
+dist/centigram.css
