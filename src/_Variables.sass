@@ -1,3 +1,4 @@
+@use "sass:meta"
 
 // Color
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -44,4 +45,4 @@ $font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif !default
   --color-success-light: #{$color-success-light}
   --color-warning: #{$color-warning}
   --color-warning-light: #{$color-warning-light}
-  --font-family: #{$font-family}
+  --font-family: #{meta.inspect($font-family)}
