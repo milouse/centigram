@@ -1,0 +1,44 @@
+@use "sass:color"
+@use "sass:string"
+
+// Dark theme
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$color-primary-dark: color.scale($color-primary, $lightness: 15%)
+
+@media (prefers-color-scheme: dark)
+  :root
+    --color-initial: #222
+    --color-primary: #{$color-primary-dark}
+
+  body
+    background-color: var(--color-initial)
+    color: var(--color-quaternary)
+
+  input[type='color'],
+  input[type='date'],
+  input[type='datetime'],
+  input[type='datetime-local'],
+  input[type='email'],
+  input[type='month'],
+  input[type='number'],
+  input[type='password'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='text'],
+  input[type='url'],
+  input[type='week'],
+  input:not([type]),
+  textarea,
+  select
+    color: var(--color-quaternary)
+    background-color: var(--color-secondary)
+
+  select:focus
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23' + string.slice(#{$color-primary-dark}, 2) + '" d="M0,0l6,8l6-8"/></svg>')
+
+  .notification
+    color: var(--color-secondary)
+
+  td, th
+    border-bottom-color: var(--color-secondary)
