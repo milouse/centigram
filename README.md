@@ -19,7 +19,7 @@ time to import it back here.
 
 ### Done
 
-- Move to relase 1.5
+- Move to release 1.5
 - Merge feature/98-css-variable
 - Merge feature/99-remove-flex-basis
 - Add a dark theme
