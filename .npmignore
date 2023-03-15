@@ -1,9 +1,6 @@
 .github
 .gitignore
 .npmignore
-.prettierignore
-.sasslintrc
-backstop.config.js
+demo.html
 package-lock.json
 package.json
-test
