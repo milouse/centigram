@@ -12,38 +12,32 @@ with fewer properties to reset resulting in cleaner code. Hope you enjoy!
 Centigram is a friendly fork of [Milligram](https://milligram.io/), which
 seems a bit discontinuated at the time of 2022.
 
-The following documentation will still refer to Milligram website until I take
-time to import it back here.
-
 ## Differences from Milligram
 
-### Done
-
-- Move to release 1.5
-- Merge feature/98-css-variable
-- Merge feature/99-remove-flex-basis
+- Move to upstream release 1.5 (never published)
+- Merge [feature/98-css-variable](https://github.com/milligram/milligram/pull/262)
+- Merge [feature/99-remove-flex-basis](https://github.com/milligram/milligram/pull/263)
+- Merge [215-breakpoint-update](https://github.com/milligram/milligram/pull/265)
+- Fix some typo in contributing file [upstream #298](https://github.com/milligram/milligram/pull/298)
+- Remove dependency on CSS reset or Google Font
 - Add a dark theme
+- Add notifications widget
+- Add a center text class
 - Support input type time
-
-### TODO
-
-- Make tests work again
+- And more…
 
 ## Table of Contents
 
-- [Getting Started](https://milligram.io/#getting-started)
-- [Typography](https://milligram.io/#typography)
-- [Blockquotes](https://milligram.io/#blockquotes)
-- [Buttons](https://milligram.io/#buttons)
-- [Lists](https://milligram.io/#lists)
-- [Forms](https://milligram.io/#forms)
-- [Tables](https://milligram.io/#tables)
-- [Grids](https://milligram.io/#grids)
-- [Code](https://milligram.io/#code)
-- [Utilities](https://milligram.io/#utilities)
-- [Tips](https://milligram.io/#tips)
-- [Browser Support](https://milligram.io/#browser-support)
-- [Examples](https://milligram.io/#examples)
+- [Typography](https://milouse.github.io/centigram/demo.html#typography)
+- [Blockquotes](https://milouse.github.io/centigram/demo.html#blockquotes)
+- [Code](https://milouse.github.io/centigram/demo.html#code)
+- [Notifications](https://milouse.github.io/centigram/demo.html#notifications)
+- [Buttons](https://milouse.github.io/centigram/demo.html#buttons)
+- [Lists](https://milouse.github.io/centigram/demo.html#lists)
+- [Forms](https://milouse.github.io/centigram/demo.html#forms)
+- [Tables](https://milouse.github.io/centigram/demo.html#tables)
+- [Grids](https://milouse.github.io/centigram/demo.html#grids)
+- [Utilities](https://milouse.github.io/centigram/demo.html#utilities)
 
 ## Contributing
 
@@ -52,5 +46,7 @@ Want to contribute? Follow these
 
 ## License
 
-Designed with ♥ by [CJ Patoilo](https://twitter.com/cjpatoilo). Licensed under
-the [MIT License](https://cjpatoilo.com/license).
+Designed with ♥ by [CJ Patoilo](https://twitter.com/cjpatoilo) and improved by
+[Étienne Deparis](https://etienne.depar.is).
+
+Licensed under the [MIT License](./LICENSE).
