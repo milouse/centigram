@@ -23,6 +23,7 @@ time to import it back here.
 - Merge feature/98-css-variable
 - Merge feature/99-remove-flex-basis
 - Add a dark theme
+- Support input type time
 
 ### TODO
 
