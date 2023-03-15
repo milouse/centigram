@@ -27,7 +27,7 @@ select
   box-shadow: none
   box-sizing: inherit
   height: 3.8rem
-  padding: .6rem 1.0rem .7rem // This vertically centers text on FF, ignored by Webkit
+  padding: .6rem 1rem .7rem // This vertically centers text on FF, ignored by Webkit
   width: 100%
 
   &:focus
@@ -36,7 +36,7 @@ select
 
 select
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23' + string.slice(#{$color-quaternary}, 2) + '" d="M0,0l6,8l6-8"/></svg>') center right no-repeat
-  padding-right: 3.0rem
+  padding-right: 3rem
 
   &:focus
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23' + string.slice(#{$color-primary}, 2) + '" d="M0,0l6,8l6-8"/></svg>')
