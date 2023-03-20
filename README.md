@@ -24,6 +24,7 @@ seems a bit discontinuated at the time of 2022.
 - Add notifications widget
 - Add a center text class
 - Support input type time
+- Support disabled and readonly fields
 - And more…
 
 ## Table of Contents

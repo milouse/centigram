@@ -35,6 +35,12 @@ select
     border-color: var(--color-primary)
     outline: 0
 
+  &::placeholder
+    opacity: .4
+
+  &[disabled], &[readonly]
+    background-color: var(--color-background-alt)
+
 select
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23' + string.slice(#{$color-border-strong}, 2) + '" d="M0,0l6,8l6-8"/></svg>') center right no-repeat
   padding-right: 3rem
