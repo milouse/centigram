@@ -1,48 +1,65 @@
 @use "sass:color"
 @use "sass:string"
 
-// Dark theme
+// Dark colors
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-$color-background-dark: #222 !default
+$color-foreground-dark: #d2d2d2 !default
+
+$color-background-dark: #2c2d2e !default
+$color-background-alt-dark: #141516 !default
+
+$color-border-strong-dark: #666 !default
+$color-border-smooth-dark: #555 !default
+
 $color-primary-dark: color.scale($color-primary, $lightness: 15%) !default
+$color-primary-light-dark: color.scale($color-primary-light, $lightness: -5%) !default
+$color-danger-light-dark: color.scale($color-danger-light, $lightness: -5%) !default
+$color-info-light-dark: color.scale($color-info-light, $lightness: -5%) !default
+$color-success-light-dark: color.scale($color-success-light, $lightness: -5%) !default
+$color-warning-light-dark: color.scale($color-warning-light, $lightness: -5%) !default
+
+// CSS Variables
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 @media (prefers-color-scheme: dark)
   :root
+    --color-foreground: #{$color-foreground-dark}
     --color-background: #{$color-background-dark}
+    --color-background-alt: #{$color-background-alt-dark}
+    --color-border-strong: #{$color-border-strong-dark}
+    --color-border-smooth: #{$color-border-smooth-dark}
     --color-primary: #{$color-primary-dark}
+    --color-primary-light: #{$color-primary-light-dark}
+    --color-danger-light: #{$color-danger-light-dark}
+    --color-info-light: #{$color-info-light-dark}
+    --color-success-light: #{$color-success-light-dark}
+    --color-warning-light: #{$color-warning-light-dark}
+
+  // Specific rules
+  // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
   body
     background-color: var(--color-background)
-    color: var(--color-quaternary)
 
-  input[type='color'],
-  input[type='date'],
-  input[type='datetime'],
-  input[type='datetime-local'],
-  input[type='email'],
-  input[type='month'],
-  input[type='number'],
-  input[type='password'],
-  input[type='search'],
-  input[type='tel'],
-  input[type='text'],
-  input[type='time'],
-  input[type='url'],
-  input[type='week'],
-  input:not([type]),
-  textarea,
-  select,
-  code,
-  pre
-    color: var(--color-border-strong)
-    background-color: var(--color-foreground)
+  select
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23' + string.slice(#{$color-border-strong-dark}, 2) + '" d="M0,0l6,8l6-8"/></svg>') center right no-repeat
 
-  select:focus
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23' + string.slice(#{$color-primary-dark}, 2) + '" d="M0,0l6,8l6-8"/></svg>')
+    &:focus
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23' + string.slice(#{$color-primary-dark}, 2) + '" d="M0,0l6,8l6-8"/></svg>')
 
   .notification
-    color: var(--color-foreground)
+    &.is-danger
+      color: var(--color-background)
 
-  td, th
-    border-bottom-color: var(--color-foreground)
+    &.is-info
+      color: var(--color-background-alt)
+
+    &.is-primary
+      color: var(--color-background-alt)
+
+    &.is-success
+      color: var(--color-background-alt)
+
+    &.is-warning
+      color: var(--color-background-alt)
