@@ -3,12 +3,15 @@
 // Color
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-$color-initial: #fff !default
+$color-foreground: #606c76 !default
+
+$color-background: #fff !default
+$color-background-alt: #f4f5f6 !default
+
+$color-border-strong: #d1d1d1 !default
+$color-border-smooth: #e1e1e1 !default
+
 $color-primary: #9b4dca !default
-$color-secondary: #606c76 !default
-$color-tertiary: #f4f5f6 !default
-$color-quaternary: #d1d1d1 !default
-$color-quinary: #e1e1e1 !default
 $color-primary-light: #f3eaf9 !default
 
 // Following colors are from https://bulma.io
@@ -30,13 +33,17 @@ $font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif !default
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 :root
-  --color-initial: #{$color-initial}
+  --color-foreground: #{$color-foreground}
+
+  --color-background: #{$color-background}
+  --color-background-alt: #{$color-background-alt}
+
+  --color-border-strong: #{$color-border-strong}
+  --color-border-smooth: #{$color-border-smooth}
+
   --color-primary: #{$color-primary}
-  --color-secondary: #{$color-secondary}
-  --color-tertiary: #{$color-tertiary}
-  --color-quaternary: #{$color-quaternary}
-  --color-quinary: #{$color-quinary}
   --color-primary-light: #{$color-primary-light}
+
   --color-danger: #{$color-danger}
   --color-danger-light: #{$color-danger-light}
   --color-info: #{$color-info}
@@ -45,4 +52,5 @@ $font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif !default
   --color-success-light: #{$color-success-light}
   --color-warning: #{$color-warning}
   --color-warning-light: #{$color-warning-light}
+
   --font-family: #{meta.inspect($font-family)}

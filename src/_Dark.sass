@@ -4,15 +4,16 @@
 // Dark theme
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-$color-primary-dark: color.scale($color-primary, $lightness: 15%)
+$color-background-dark: #222 !default
+$color-primary-dark: color.scale($color-primary, $lightness: 15%) !default
 
 @media (prefers-color-scheme: dark)
   :root
-    --color-initial: #222
+    --color-background: #{$color-background-dark}
     --color-primary: #{$color-primary-dark}
 
   body
-    background-color: var(--color-initial)
+    background-color: var(--color-background)
     color: var(--color-quaternary)
 
   input[type='color'],
@@ -34,14 +35,14 @@ $color-primary-dark: color.scale($color-primary, $lightness: 15%)
   select,
   code,
   pre
-    color: var(--color-quaternary)
-    background-color: var(--color-secondary)
+    color: var(--color-border-strong)
+    background-color: var(--color-foreground)
 
   select:focus
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23' + string.slice(#{$color-primary-dark}, 2) + '" d="M0,0l6,8l6-8"/></svg>')
 
   .notification
-    color: var(--color-secondary)
+    color: var(--color-foreground)
 
   td, th
-    border-bottom-color: var(--color-secondary)
+    border-bottom-color: var(--color-foreground)

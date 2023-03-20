@@ -10,7 +10,7 @@ input[type='submit']
   background-color: var(--color-primary)
   border: .1rem solid var(--color-primary)
   border-radius: .4rem
-  color: var(--color-initial)
+  color: var(--color-background)
   cursor: pointer
   display: inline-block
   font-size: 1.1rem
@@ -26,9 +26,9 @@ input[type='submit']
 
   &:focus,
   &:hover
-    background-color: var(--color-secondary)
-    border-color: var(--color-secondary)
-    color: var(--color-initial)
+    background-color: var(--color-foreground)
+    border-color: var(--color-foreground)
+    color: var(--color-background)
     outline: 0
 
   &[disabled]
@@ -47,8 +47,8 @@ input[type='submit']
     &:focus,
     &:hover
       background-color: transparent
-      border-color: var(--color-secondary)
-      color: var(--color-secondary)
+      border-color: var(--color-foreground)
+      color: var(--color-foreground)
 
     &[disabled]
 
@@ -66,7 +66,7 @@ input[type='submit']
     &:hover
       background-color: transparent
       border-color: transparent
-      color: var(--color-secondary)
+      color: var(--color-foreground)
 
     &[disabled]
 

@@ -22,7 +22,8 @@ textarea,
 select
   -webkit-appearance: none // sass-lint:disable-line no-vendor-prefixes
   background-color: transparent
-  border: .1rem solid var(--color-quaternary)
+  color: var(--color-foreground)
+  border: .1rem solid var(--color-border-strong)
   border-radius: .4rem
   box-shadow: none
   box-sizing: inherit
@@ -35,7 +36,7 @@ select
     outline: 0
 
 select
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23' + string.slice(#{$color-quaternary}, 2) + '" d="M0,0l6,8l6-8"/></svg>') center right no-repeat
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23' + string.slice(#{$color-border-strong}, 2) + '" d="M0,0l6,8l6-8"/></svg>') center right no-repeat
   padding-right: 3rem
 
   &:focus
