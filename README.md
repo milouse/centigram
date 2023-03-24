@@ -19,7 +19,10 @@ seems a bit discontinuated at the time of 2022.
 - Merge [feature/99-remove-flex-basis](https://github.com/milligram/milligram/pull/263)
 - Merge [215-breakpoint-update](https://github.com/milligram/milligram/pull/265)
 - Fix some typo in contributing file [upstream #298](https://github.com/milligram/milligram/pull/298)
-- Remove dependency on CSS reset or Google Font
+- Remove dependency on CSS reset or Google Font. Centigram recommends you the
+  [Inter font family](https://rsms.me/inter/), but it is up to you to set your
+  own fonts set. Customize the `$font-family` Sass variable or `--font-family`
+  CSS variable for that.
 - Add a dark theme
 - Add notifications widget
 - Add a center text class
