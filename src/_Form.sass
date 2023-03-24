@@ -41,12 +41,17 @@ select
   &[disabled], &[readonly]
     background-color: var(--color-background-alt)
 
+@mixin select-background-svg($color)
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23' + string.slice(#{$color}, 2) + '" d="M0,0l6,8l6-8"/></svg>')
+
 select
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23' + string.slice(#{$color-border-strong}, 2) + '" d="M0,0l6,8l6-8"/></svg>') center right no-repeat
+  @include select-background-svg($color-border-strong)
+  background-position: center right
+  background-repeat: no-repeat
   padding-right: 3rem
 
   &:focus
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23' + string.slice(#{$color-primary}, 2) + '" d="M0,0l6,8l6-8"/></svg>')
+    @include select-background-svg($color-primary)
 
   &[multiple]
     background: none
