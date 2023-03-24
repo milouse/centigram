@@ -20,3 +20,14 @@
 // Center content text or elements
 .center-text
   text-align: center
+
+::selection
+  background-color: var(--color-primary-light)
+  color: var(--color-foreground)
+
+mark
+  background-color: var(--color-primary)
+  color: var(--color-background)
+
+  &::selection
+    color: var(--color-foreground)
