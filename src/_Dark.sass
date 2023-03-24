@@ -19,29 +19,24 @@ $color-primary-light-dark: color.scale($color-primary-light, $lightness: -5%) !d
 $color-success-light-dark: color.scale($color-success-light, $lightness: -5%) !default
 $color-warning-light-dark: color.scale($color-warning-light, $lightness: -5%) !default
 
-// CSS Variables
+
+// Mixins, to cover both media query and specific class for specific CSS rules
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@media (prefers-color-scheme: dark)
-  :root
-    --color-background: #{$color-background-dark}
-    --color-background-alt: #{$color-background-alt-dark}
-    --color-border-strong: #{$color-border-strong-dark}
-    --color-border-smooth: #{$color-border-smooth-dark}
-    --color-foreground: #{$color-foreground-dark}
-    --color-danger-light: #{$color-danger-light-dark}
-    --color-info-light: #{$color-info-light-dark}
-    --color-primary: #{$color-primary-dark}
-    --color-primary-light: #{$color-primary-light-dark}
-    --color-success-light: #{$color-success-light-dark}
-    --color-warning-light: #{$color-warning-light-dark}
+@mixin dark-color-scheme-css-variables
+  --color-background: #{$color-background-dark}
+  --color-background-alt: #{$color-background-alt-dark}
+  --color-border-strong: #{$color-border-strong-dark}
+  --color-border-smooth: #{$color-border-smooth-dark}
+  --color-foreground: #{$color-foreground-dark}
+  --color-danger-light: #{$color-danger-light-dark}
+  --color-info-light: #{$color-info-light-dark}
+  --color-primary: #{$color-primary-dark}
+  --color-primary-light: #{$color-primary-light-dark}
+  --color-success-light: #{$color-success-light-dark}
+  --color-warning-light: #{$color-warning-light-dark}
 
-  // Specific rules
-  // ––––––––––––––––––––––––––––––––––––––––––––––––––
-
-  body
-    background-color: var(--color-background)
-
+@mixin dark-color-scheme-specificities
   select
     @include select-background-svg($color-border-strong-dark)
 
@@ -59,3 +54,41 @@ $color-warning-light-dark: color.scale($color-warning-light, $lightness: -5%) !d
   ::selection,
   mark::selection
     color: var(--color-background)
+
+
+// Declaration through media query
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+@media (prefers-color-scheme: dark)
+  :root
+    @include dark-color-scheme-css-variables
+
+  @include dark-color-scheme-specificities
+
+// Declaration through specific class (for manual switch)
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+:root.centigram-dark
+  @include dark-color-scheme-css-variables
+
+  @include dark-color-scheme-specificities
+
+// Specific fixes for light theme with prefers-color-scheme dark
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+:root.centigram-light
+  select
+    @include select-background-svg($color-border-strong)
+
+    &:focus
+      @include select-background-svg($color-primary)
+
+  .notification
+    &.is-danger,
+    &.is-info,
+    &.is-primary,
+    &.is-success,
+    &.is-warning
+      color: var(--color-foreground)
+
+  ::selection,
+  mark::selection
+    color: var(--color-foreground)

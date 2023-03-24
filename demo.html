@@ -36,6 +36,13 @@
           text-transform: uppercase;
       }
 
+      #color-scheme-switch {
+          font-size: 2.8rem;
+          position: absolute;
+          right: 2rem;
+          top: 2rem;
+      }
+
       footer.container {
           margin-top: 3rem;
       }
@@ -48,6 +55,8 @@
   <body>
     <main class="container">
       <h1 class="center-text">Centigram</h1>
+
+      <button id="color-scheme-switch" class="button-outline">🌙</button>
 
       <section id="typography">
         <h2>Typography</h2>
@@ -793,5 +802,40 @@
            title="MIT License">MIT License</a>.
       </p>
     </footer>
+
+    <script>
+      var currentColorScheme = "light";
+
+      function detectColorScheme() {
+        let nextScheme = "🌜";
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          currentColorScheme = "dark";
+          nextScheme = "🌞";
+        }
+        const schemeSwitch = document.getElementById("color-scheme-switch");
+        schemeSwitch.textContent = nextScheme;
+        schemeSwitch.addEventListener(
+          "click",
+          function (event) {
+            const schemeSwitch = event.target;
+            const root = document.querySelector("html");
+            if (currentColorScheme == "dark") {
+              root.classList.add("centigram-light");
+              root.classList.remove("centigram-dark");
+              currentColorScheme = "light";
+              schemeSwitch.textContent = "🌜";
+            } else {
+              root.classList.add("centigram-dark");
+              root.classList.remove("centigram-light");
+              currentColorScheme = "dark";
+              schemeSwitch.textContent = "🌞";
+            }
+          },
+          false
+        );
+      }
+
+      document.addEventListener('DOMContentLoaded', detectColorScheme, false);
+    </script>
   </body>
 </html>
