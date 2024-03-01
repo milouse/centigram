@@ -26,12 +26,13 @@
   ],
   "devDependencies": {
     "autoprefixer": "^10.4",
+    "cssnano": "^6.0",
     "postcss-cli": "^11.0",
     "sass": "^1.71"
   },
   "scripts": {
-    "build": "sass --style compressed --no-source-map src/centigram.sass dist/centigram.min.css",
-    "postbuild": "postcss -u autoprefixer --no-map.inline --autoprefixer.browsers \"last 1 versions\" -r dist/*.css",
-    "watch": "sass --style expanded --watch src/centigram.sass dist/centigram.css"
+    "build": "sass --style expanded --no-source-map src/centigram.sass dist/centigram.css",
+    "postbuild": "postcss dist/centigram.css -u cssnano -o dist/centigram.min.css && postcss dist/*.css -r -u autoprefixer --no-map --autoprefixer.browsers \"last 1 versions\"",
+    "watch": "sass --style expanded --watch src/centigram.sass dist/centigram.wip.css"
   }
 }
