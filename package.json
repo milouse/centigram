@@ -26,8 +26,8 @@
   ],
   "devDependencies": {
     "autoprefixer": "^10.4",
-    "postcss-cli": "^10.1",
-    "sass": "^1.58"
+    "postcss-cli": "^11.0",
+    "sass": "^1.71"
   },
   "scripts": {
     "build": "sass --style compressed --no-source-map src/centigram.sass dist/centigram.min.css",
