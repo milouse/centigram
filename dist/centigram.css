@@ -719,6 +719,14 @@ img {
   text-align: center;
 }
 
+.hero-full-height {
+  min-height: 100vh;
+}
+
+.hero-half-height {
+  min-height: 50vh;
+}
+
 ::-moz-selection {
   background-color: var(--color-primary-light);
   color: var(--color-foreground);
