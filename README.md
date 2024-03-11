@@ -2,10 +2,10 @@
 
 > A minimalist CSS framework.
 
-## Why it's awesome
+## Why it’s awesome
 
 Centigram provides a minimal setup of styles for a fast and clean starting
-point. Just it! **Only 2.5kb gzipped!** It's not about a UI
+point. Just it! **Only 2.5kb gzipped!** It’s not about a UI
 framework. Specially designed for better performance and higher productivity
 with fewer properties to reset resulting in cleaner code. Hope you enjoy!
 
