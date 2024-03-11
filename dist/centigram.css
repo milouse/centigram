@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root,
 :root.centigram-light {
   --color-background: #fff;
@@ -502,7 +503,6 @@ a:focus, a:hover {
 dl,
 ol,
 ul {
-  list-style: none;
   margin-top: 0;
   padding-left: 0;
 }
@@ -524,7 +524,14 @@ ol {
 }
 
 ul {
-  list-style: circle inside;
+  list-style-type: "− ";
+  list-style-position: inside;
+}
+ul ul {
+  list-style-type: circle;
+}
+ul ul ul {
+  list-style-type: square;
 }
 
 dt {

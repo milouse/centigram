@@ -5,7 +5,6 @@
 dl,
 ol,
 ul
-  list-style: none
   margin-top: 0
   padding-left: 0
 
@@ -19,7 +18,14 @@ ol
   list-style: decimal inside
 
 ul
-  list-style: circle inside
+  list-style-type: "− "
+  list-style-position: inside
+
+  ul
+    list-style-type: circle
+
+    ul
+      list-style-type: square
 
 dt
   font-weight: 600
